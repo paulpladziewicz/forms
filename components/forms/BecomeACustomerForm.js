@@ -68,7 +68,7 @@ const BecomeACustomerForm = () => {
 							onBlur={handleBlur}
 							value={values.businessName}
 						/>
-						{errors.businessName && touched.businessName && errors.businessName}
+						<span style={{color: 'red'}}>{errors.businessName && touched.businessName && errors.businessName}</span>
 						<FormControl>
 							<InputLabel id="business-type-label">Business Type</InputLabel>
 							<Select
@@ -84,8 +84,7 @@ const BecomeACustomerForm = () => {
 								<MenuItem value='College'>College</MenuItem>
 							</Select>
 						</FormControl>
-						{errors.businessType && touched.businessType && errors.businessType}
-						{/*//*/}
+						<span style={{color: 'red'}}>{errors.businessType && touched.businessType && errors.businessType}</span>
 						<TextField
 							type="text"
 							name="firstName"
@@ -94,7 +93,7 @@ const BecomeACustomerForm = () => {
 							onBlur={handleBlur}
 							value={values.firstName}
 						/>
-						{errors.firstName && touched.firstName && errors.firstName}
+						<span style={{color: 'red'}}>{errors.firstName && touched.firstName && errors.firstName}</span>
 						<TextField
 							type="text"
 							name="lastName"
@@ -103,7 +102,7 @@ const BecomeACustomerForm = () => {
 							onBlur={handleBlur}
 							value={values.lastName}
 						/>
-						{errors.lastName && touched.lastName && errors.lastName}
+						<span style={{color: 'red'}}>{errors.lastName && touched.lastName && errors.lastName}</span>
 						<TextField
 							type="email"
 							name="email"
@@ -112,7 +111,7 @@ const BecomeACustomerForm = () => {
 							onBlur={handleBlur}
 							value={values.email}
 						/>
-						{errors.email && touched.email && errors.email}
+						<span style={{color: 'red'}}>{errors.email && touched.email && errors.email}</span>
 						<TextField
 							type="text"
 							name="phone"
@@ -121,14 +120,14 @@ const BecomeACustomerForm = () => {
 							onBlur={handleBlur}
 							value={values.phone}
 						/>
-						{errors.phone && touched.phone && errors.phone}
+						<span style={{color: 'red'}}>{errors.phone && touched.phone && errors.phone}</span>
 						<button type="submit" disabled={isSubmitting} style={{margin: '16px 0px'}}>
 							Submit
 						</button>
-						<h4 style={{margin: '0'}}>Value Data</h4>
-						<pre>{JSON.stringify(values, null, 2)}</pre>
-						<h4 style={{margin: '0'}}>Error Data</h4>
-						<pre>{JSON.stringify(errors, null, 2)}</pre>
+						<h3 style={{margin: '0'}}>Value Data</h3>
+						<pre style={{color: 'blue'}}>{JSON.stringify(values, null, 2)}</pre>
+						<h3 style={{margin: '0'}}>Error Data</h3>
+						<pre style={{color: 'blue'}}>{JSON.stringify(errors, null, 2)}</pre>
 					</form>
 				)}
 			</Formik>
