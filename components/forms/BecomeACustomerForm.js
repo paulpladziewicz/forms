@@ -9,8 +9,14 @@ const validationSchema = yup.object({
 		.email(),
 	businessName: yup
 		.string()
-		.required()
-		.max(10, 'Business name cannot be more than 10 characters.')
+		.required('Business name is required.')
+		.max(10, 'Business name cannot be more than 10 characters.'),
+	firstName: yup
+		.string()
+		.required('First name is required.'),
+	lastName: yup
+		.string()
+		.required('Last name is required.')
 });
 
 const BecomeACustomerForm = () => {
@@ -21,8 +27,9 @@ const BecomeACustomerForm = () => {
 				validateOnChange={true}
 				validationSchema={validationSchema}
 				initialValues={{
-					email: '',
-					businessName: ''
+					businessName: '',
+					firstName: '',
+					lastName: ''
 				}}
 				onSubmit={(values, { setSubmitting }) => {
 					setTimeout(() => {
@@ -43,21 +50,35 @@ const BecomeACustomerForm = () => {
 					}) => (
 					<form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', width: '500px'}}>
 						<TextField
-							type="email"
-							name="email"
-							onChange={handleChange}
-							onBlur={handleBlur}
-							value={values.email}
-						/>
-						{errors.email && touched.email && errors.email}
-						<TextField
 							type="text"
 							name="businessName"
+							label="Business or Non-Profit Organization Name"
+							style={{marginBottom: '16px'}}
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.businessName}
 						/>
 						{errors.businessName && touched.businessName && errors.businessName}
+						{/*// dfds*/}
+						{/*//*/}
+						<TextField
+							type="text"
+							name="firstName"
+							label="First Name"
+							onChange={handleChange}
+							onBlur={handleBlur}
+							value={values.firstName}
+						/>
+						{errors.firstName && touched.firstName && errors.firstName}
+						<TextField
+							type="text"
+							name="lastName"
+							label="Last Name"
+							onChange={handleChange}
+							onBlur={handleBlur}
+							value={values.lastName}
+						/>
+						{errors.lastName && touched.lastName && errors.lastName}
 						<button type="submit" disabled={isSubmitting}>
 							Submit
 						</button>
