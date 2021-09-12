@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import BecomeACustomerForm from '../components/forms/BecomeACustomerForm'
 import BecomeACustomerFormES from '../components/forms/BecomeACustomerFormES'
+import LangDropdown from '../components/LangDropdown'
 
 export default function Home() {
 	const router = useRouter();
@@ -15,6 +16,7 @@ export default function Home() {
 			</Head>
 
 			<h1>Become A Customer</h1>
+			<LangDropdown />
 			{locale === 'en' && <BecomeACustomerForm />}
 			{locale === 'es' && <BecomeACustomerFormES />}
 		</div>
