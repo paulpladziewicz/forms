@@ -29,6 +29,7 @@ export default function Home() {
 				<li>Material UI</li>
 			</ul>
 
+			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			<p>The project is internationalized for English and Spanish. The correct locale would be chosen based on the user's browser settings, or the user could utilize the language dropdown.</p>
 			<a href='https://github.com/paulpladziewicz/forms' target='_blank' rel='noreferrer'>Review the code on Github here.</a>
 		</div>
