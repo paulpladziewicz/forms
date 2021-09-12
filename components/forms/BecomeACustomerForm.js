@@ -61,19 +61,19 @@ const BecomeACustomerForm = () => {
 					}) => (
 					<form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', width: '500px'}}>
 						<TextField
-							type="text"
-							name="businessName"
-							label="Business or Non-Profit Organization Name"
+							type='text'
+							name='businessName'
+							label='Business or Non-Profit Organization Name'
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.businessName}
 						/>
 						<span style={{color: 'red'}}>{errors.businessName && touched.businessName && errors.businessName}</span>
 						<FormControl>
-							<InputLabel id="business-type-label">Business Type</InputLabel>
+							<InputLabel id='business-type-label'>Business Type</InputLabel>
 							<Select
 								type='select'
-								labelId="business-type-label"
+								labelId='business-type-label'
 								name='businessType'
 								value={values.businessType}
 								onChange={handleChange}
@@ -86,42 +86,42 @@ const BecomeACustomerForm = () => {
 						</FormControl>
 						<span style={{color: 'red'}}>{errors.businessType && touched.businessType && errors.businessType}</span>
 						<TextField
-							type="text"
-							name="firstName"
-							label="First Name"
+							type='text'
+							name='firstName'
+							label='First Name'
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.firstName}
 						/>
 						<span style={{color: 'red'}}>{errors.firstName && touched.firstName && errors.firstName}</span>
 						<TextField
-							type="text"
-							name="lastName"
-							label="Last Name"
+							type='text'
+							name='lastName'
+							label='Last Name'
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.lastName}
 						/>
 						<span style={{color: 'red'}}>{errors.lastName && touched.lastName && errors.lastName}</span>
 						<TextField
-							type="email"
-							name="email"
-							label="Email"
+							type='email'
+							name='email'
+							label='Email'
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.email}
 						/>
 						<span style={{color: 'red'}}>{errors.email && touched.email && errors.email}</span>
 						<TextField
-							type="text"
-							name="phone"
-							label="Phone Number"
+							type='text'
+							name='phone'
+							label='Phone Number'
 							onChange={handleChange}
 							onBlur={handleBlur}
 							value={values.phone}
 						/>
 						<span style={{color: 'red'}}>{errors.phone && touched.phone && errors.phone}</span>
-						<button type="submit" disabled={isSubmitting} style={{margin: '16px 0px'}}>
+						<button type='submit' disabled={isSubmitting} style={{margin: '16px 0px'}}>
 							Submit
 						</button>
 						<h3 style={{margin: '0'}}>Value Data</h3>

@@ -14,10 +14,10 @@ const LangDropdown = () => {
 			<select
 				onChange={changeLanguage}
 				defaultValue={locale}
-				className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
+				className='text-white text-shadow-sm text-lg bg-transparent tracking-wide'
 			>
-				<option className="text-black" value="en">EN</option>
-				<option className="text-black" value="es">ES</option>
+				<option className='text-black' value='en'>EN</option>
+				<option className='text-black' value='es'>ES</option>
 			</select>
 		</div>
 	)
