@@ -8,7 +8,7 @@ const validationSchema = yup.object({
 	businessName: yup
 		.string()
 		.required('Se requiere el nombre de la empresa.')
-		.max(10, 'El nombre de la empresa no puede tener más de 10 caracteres.'),
+		.max(30, 'El nombre de la empresa no puede tener más de 10 caracteres.'),
 	businessType: yup
 		.string()
 		.required('Seleccione un tipo de empresa.'),
