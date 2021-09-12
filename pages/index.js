@@ -30,7 +30,7 @@ export default function Home() {
 			</ul>
 
 			<p>The project is internationalized for English and Spanish. The correct locale would be chosen based on the user's browser settings, or the user could utilize the language dropdown.</p>
-			<a href="https://github.com/paulpladziewicz/forms" target='_blank' rel="noreferrer">Review the code on Github here.</a>
+			<a href='https://github.com/paulpladziewicz/forms' target='_blank' rel='noreferrer'>Review the code on Github here.</a>
 		</div>
 	)
 }
